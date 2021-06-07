@@ -46,9 +46,9 @@ def greet_person():
 def show_madlib_form():
     """ Show madlibs form """
 
-    choice = request.form.get("play-game")
+    choice = request.args.get("play-game")
 
-    if choice == "No":
+    if choice == "no":
         return render_template("goodbye.html")
     else:
         return render_template("game.html")
